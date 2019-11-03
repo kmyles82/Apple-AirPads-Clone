@@ -24,7 +24,6 @@ let scene = new ScrollMagic.Scene({
 //text animation
 const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 })
 const addRevoAnim = TweenMax.fromTo(revo, 3,{opacity: 1}, {opacity: 0})
-const removeRevoAnim = TweenMax.fromTo(revo, 3,{opacity: 0}, {opacity: 1})
 // const niceAnim = TweenMax.fromTo(nice, 3,{opacity: 1}, {opacity: 0})
 // const xmasAnim = TweenMax.fromTo(xmas, 3, {opacity: 1 }, { opacity: 0})
 
@@ -36,15 +35,6 @@ let scene2 = new ScrollMagic.Scene({
     .setTween(addRevoAnim)
     .addTo(controller)
 
-let scene3 = new ScrollMagic.Scene({
-    duration: 3000,
-    triggerElement: intro,
-    triggerHook: 3
-})
-    .setTween(removeRevoAnim)
-    .addTo(controller)
-
-    
 // let scene3 = new ScrollMagic.Scene({
 //     duration: 3000,
 //     triggerElement: intro,
@@ -70,7 +60,7 @@ let scene3 = new ScrollMagic.Scene({
 //     .setTween(textAnim)
 //     .addTo(controller);
 
-console.log(scene2)
+// console.log(scene2)
 
 
 //video animation
