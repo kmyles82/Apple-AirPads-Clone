@@ -6,11 +6,13 @@ const section = document.querySelector('section');
 const end = section.querySelector('h1');
 
 //scroll magic
-const controller = new ScrollMagic.controller();
+const controller = new ScrollMagic.Controller();
 
-const scene = new ScrollMagic.scene({
-    duration: 1000,
-    triggerElement: intro,
-    triggerHook: 0
-})
+const scene = new ScrollMagic.Scene({
+        duration: 9000,
+        triggerElement: intro,
+        triggerHook: 0
+    })
+    .addIndicators()
+    .setPin(intro)
     .addTo(controller);
