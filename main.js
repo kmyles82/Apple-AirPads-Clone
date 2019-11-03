@@ -22,35 +22,55 @@ let scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 //text animation
-const textAnim = TweenMax.fromTo(text, 3,{opacity: 1}, {opacity: 0})
-const revoAnim = TweenMax.fromTo(revo, 3,{opacity: 1}, {opacity: 0})
-const niceAnim = TweenMax.fromTo(nice, 3,{opacity: 1}, {opacity: 0})
-const xmasAnim = TweenMax.fromTo(xmas, 3, { opacity: 1 }, { opacity: 0 })
+const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 })
+const addRevoAnim = TweenMax.fromTo(revo, 3,{opacity: 1}, {opacity: 0})
+const removeRevoAnim = TweenMax.fromTo(revo, 3,{opacity: 0}, {opacity: 1})
+// const niceAnim = TweenMax.fromTo(nice, 3,{opacity: 1}, {opacity: 0})
+// const xmasAnim = TweenMax.fromTo(xmas, 3, {opacity: 1 }, { opacity: 0})
 
 let scene2 = new ScrollMagic.Scene({
     duration: 3000,
     triggerElement: intro,
-    triggerHook: 0
+    triggerHook: 2
 })
-    .setTween(revoAnim)
-    .addTo(controller);
+    .setTween(addRevoAnim)
+    .addTo(controller)
 
 let scene3 = new ScrollMagic.Scene({
     duration: 3000,
     triggerElement: intro,
-    triggerHook: 0
+    triggerHook: 3
 })
-    .setTween(niceAnim)
-    .addTo(controller);
+    .setTween(removeRevoAnim)
+    .addTo(controller)
 
-let scene4 = new ScrollMagic.Scene({
-    duration: 3000,
-    triggerElement: intro,
-    triggerHook: 0
-})
-    .setTween(xmasAnim)
-    .addTo(controller);
+    
+// let scene3 = new ScrollMagic.Scene({
+//     duration: 3000,
+//     triggerElement: intro,
+//     triggerHook: 3
+// })
+//     .setTween(niceAnim)
+//     .addTo(controller);
 
+// let scene4 = new ScrollMagic.Scene({
+//     duration: 3000,
+//     triggerElement: intro,
+//     triggerHook: 4
+// })
+//     .setTween(xmasAnim)
+//     .addTo(controller);
+
+// let scene5 = new ScrollMagic.Scene({
+    
+//     duration: 3000,
+//     triggerElement: intro,
+//     triggerHook: 5
+// })
+//     .setTween(textAnim)
+//     .addTo(controller);
+
+console.log(scene2)
 
 
 //video animation
